@@ -21,6 +21,11 @@ jobs:
         run: |
           git checkout next
           git merge main
+      - name: Add files with conflicts
+        if: failure()
+        run: |
+          git add .
+          git commit -m "Merge main into next"
       - name: Create pull request
         uses: peter-evans/create-pull-request@v5
         with:
