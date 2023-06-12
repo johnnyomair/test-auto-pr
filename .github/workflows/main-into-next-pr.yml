@@ -27,6 +27,7 @@ jobs:
           git add .
           git commit -m "Merge main into next"
       - name: Create pull request
+        if: success() || failure()
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
