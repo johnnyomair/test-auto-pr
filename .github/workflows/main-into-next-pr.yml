@@ -36,6 +36,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: "{{ env.PR_TITLE }}"
-          body: { { env.PR_BODY } }
+          body: "{{ env.PR_BODY }}"
           base: next
           branch: merge-main-into-next
