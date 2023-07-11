@@ -35,7 +35,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: "${{ env.PR_TITLE }}"
-          body: "${{ env.PR_BODY }}"
+          title: ${{ env.PR_TITLE }}
+          body: ${{ env.PR_BODY }}
           base: next
           branch: merge-main-into-next
